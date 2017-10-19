@@ -1,0 +1,18 @@
+{% extends 'ulam/base.html' %}
+{% block title %} {{ food.food_name }} {% endblock %} 
+{% block albums_active %} active {% endblock %}
+
+{% block body %}
+<div class="container">
+ <div class="jumbotron">
+  <div class="row">
+   <div class="col-sm-12">
+    <h1 class="text-center">{{ food.food_name }}</h1>
+     <h2 class="text-center"><i>{{ food.food_caption }}</i> 
+     <a href="{% url 'ulam:index' %}">
+          <span class="glyphicon glyphicon-home"></span>
+        </a></h2>
+      <div class="thumbnail"><img src="{{ food.food_picture.url }}" class="img-responsive" alt="JRR Tolkien Smoking a Pipe">
+</div>
+
+{% endblock %}
